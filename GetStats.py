@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
-skip_index = 835469
+skip_index = 0
 ListPMID = []
 ListJournal = []
 ListCount = []
@@ -24,8 +24,6 @@ Headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 
 PhantomJSPath = 'C:\Python27\misc\PhantomJS\phantomjs.exe'
 
 flog = open('log.txt', 'w')
-#htmlfile1 = open('html1.html', 'w')
-#htmlfile2 = open('html2.html', 'w')
 
 #----------------------------------------------------------------------------------------------------------------------------
 
