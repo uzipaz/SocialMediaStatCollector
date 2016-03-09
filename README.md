@@ -15,9 +15,9 @@ To speed up the process, we could have multiple computers/hosts running the same
 In order to begin the program, we need to provide a list of PubMed articles IDs (PIDs) that we are to collect statistics about. These can be downloaded from the PubMed website (http://www.ncbi.nlm.nih.gov/pubmed) as .txt file, after reading the IDs into memory. We initiate threads such as ProxyThread which is reponsible for crawling the proxy website and download and update fresh lists of proxy servers, WriteThread waits goes linearly through the PIDs list and waits until stats for a PID has been collected and then writes them to an output file in a specific format, StatThread is the main component of the program, it firsts calls prepData which crawls through the PubMed Article webpage and extracts links to sister websites and then launch worker PMIDThread threads that will independently request/receive JSON objects from social media web APIs parse, store them to a list that will be read by the WriteThread. By doing this, the above mentioned 9,000,000 HTTP requests can processed in approximately 4 days instead of 40 days.
 
 ### Required libraries/tools
-Python Requests API (http://docs.python-requests.org/en/master/)
-Selenium WebDriver (http://www.seleniumhq.org/projects/webdriver/)
-PhantomJS Headless browser (http://phantomjs.org/)
+ - Python Requests API (http://docs.python-requests.org/en/master/)
+ - Selenium WebDriver (http://www.seleniumhq.org/projects/webdriver/)
+ - PhantomJS Headless browser (http://phantomjs.org/)
 
 ### Needed Improvements
 Some refactoring is needed to be done because I gradually put new features into the program such as website crawling, custom PriorityQueue). Program Parameters in the beginning of the program need to be programmed to be initialized by command line instead directly specifying in the source code. Maybe add a GUI interface instead of command line interface that shows the progress of the program.
