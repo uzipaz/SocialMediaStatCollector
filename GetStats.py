@@ -83,10 +83,10 @@ class PMIDThread(threading.Thread):
         self.FacebookStat = socialmedia_stats.FacebookStat()
         self.TwitterStat = socialmedia_stats.TwitterStat()
 
-        self.TwitterStat.AccessTokenKey = 'qmgBRwbl4W5QaYTy5RUscCoEo'
-        self.TwitterStat.AccessTokenSecret = 'J2WJ0TkRbzB1TUGm0IUH6ho0edRqiDeV2BGvXkR0T5UyoEGL4R'
-        self.TwitterStat.ConsumerKey = '898039630238543872-eJMVMrieBgN1SQZKmuHbjf45TRxyVy7'
-        self.TwitterStat.ConsumerSecret = 'QyHrM6IVb7gfkxoiMXuLMGqGNt39D0gK7eF8ESHdSM1DK'
+        self.TwitterStat.AccessTokenKey = TwitterAccessTokenKey
+        self.TwitterStat.AccessTokenSecret = TwitterAccessTokenSecret
+        self.TwitterStat.ConsumerKey = TwitterConsumerKey
+        self.TwitterStat.ConsumerSecret = TwitterConsumerSecret
 
     def run(self):
         """get List of URLs from PMID, and enter their respective counts into ListCount"""
@@ -209,6 +209,12 @@ Headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36'}
 
 flog = open('log.txt', 'w')
+
+# Insert you Twitter Access tokens!
+TwitterAccessTokenKey = ''
+TwitterAccessTokenSecret = ''
+TwitterConsumerKey = ''
+TwitterConsumerSecret = ''
 
 if __name__ == '__main__':
     with open(NameInputFile, 'r') as file:
