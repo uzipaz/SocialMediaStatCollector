@@ -17,7 +17,9 @@ In order to begin the program, we need to provide a list of PubMed articles IDs 
 ### Required libraries/tools
  - Python Requests API (http://docs.python-requests.org/en/master/)
  - Selenium WebDriver (http://www.seleniumhq.org/projects/webdriver/)
- - PhantomJS Headless browser (http://phantomjs.org/)
+ - geckodriver (https://github.com/mozilla/geckodriver/releases)
+ - Beautiful Soup (https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
+ - TwitterSearch (https://github.com/ckoepp/TwitterSearch)
 
 ### Needed Improvements
 Some refactoring is needed to be done because I gradually put new features into the program such as website crawling, custom PriorityQueue). Program Parameters in the beginning of the program need to be programmed to be initialized by command line instead directly specifying in the source code. Maybe add a GUI interface instead of command line interface that shows the progress of the program.
